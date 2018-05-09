@@ -1,4 +1,5 @@
 var admin = require("firebase-admin"),
+  functions = require('firebase-functions'),
   serviceAccount = require("./taipei-parking-lot-firebase-adminsdk-0qals-4c4402c7d9.json"),
   request = require("./request.js"),
   parkInfo = require("./park.js");
@@ -16,7 +17,7 @@ var defaultDatabase = admin.database();
 Promise.all([
   request.get(parkInfo.parkInfoUrl),
   request.get(parkInfo.parkInfoCntUrl)
-]).then(function(res) {
+]).then(function (res) {
   var parkInfoList = JSON.parse(res[0]),
     parkCntList = JSON.parse(res[1]);
 
@@ -31,7 +32,7 @@ Promise.all([
   for (var i = 0, len = parkInfoList.length; i < len; i++) {
     concat(parkInfoList[i]);
   }
-  
+
 
   defaultDatabase.ref('park').set(parkInfoList);
 });
