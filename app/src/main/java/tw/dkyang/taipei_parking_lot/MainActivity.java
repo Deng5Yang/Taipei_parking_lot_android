@@ -1,9 +1,13 @@
 package tw.dkyang.taipei_parking_lot;
 
+import android.annotation.SuppressLint;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager = (ViewPager)findViewById(R.id.view_pager);
         tab = (TabLayout)findViewById(R.id.view_tab);
     }
+
 
     private void initSet() {
 

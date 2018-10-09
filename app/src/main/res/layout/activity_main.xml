@@ -17,10 +17,13 @@
     <android.support.design.widget.TabLayout
         android:id="@+id/view_tab"
         android:layout_width="match_parent"
-        android:layout_height="44dp"
-        app:tabIndicatorColor="@color/design_default_color_primary"
-        app:tabSelectedTextColor="@color/colorAccent"
-        app:tabTextColor="#000000"
+        android:layout_height="47dp"
+        android:layout_alignParentBottom="true"
+        app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:tabIndicatorColor="#79c5a3"
+        app:tabSelectedTextColor="#f1a923"
+        app:tabTextColor="#9b9b9b"
+        app:tabIndicatorHeight="3dp"
         />
 
 </RelativeLayout>
