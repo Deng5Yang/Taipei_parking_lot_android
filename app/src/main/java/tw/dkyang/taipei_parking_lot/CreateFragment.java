@@ -2,6 +2,7 @@ package tw.dkyang.taipei_parking_lot;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -41,9 +42,9 @@ public class CreateFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         Log.d("checkpoint","onCreateView");
         if ("0".equals(String.valueOf(showType))){  //0=第一頁
-            return LayoutInflater.from(context).inflate(R.layout.fragment_map,null);
-        }else if ("1".equals(String.valueOf(showType))){    //1=第一頁
             return LayoutInflater.from(context).inflate(R.layout.fragment_list,null);
+        }else if ("1".equals(String.valueOf(showType))){    //1=第一頁
+            return LayoutInflater.from(context).inflate(R.layout.fragment_map,null);
         }else{
             return null;
         }

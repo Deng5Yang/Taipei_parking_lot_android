@@ -28,8 +28,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void initSet() {
 
-        tab.addTab(tab.newTab().setText("第一頁"));
-        tab.addTab(tab.newTab().setText("第二頁"));
+        tab.addTab(tab.newTab().setText("附近停車場列表"));
+        tab.addTab(tab.newTab().setText("地圖顯示"));
+
+
 
         adapter = new CustomFragmentAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
